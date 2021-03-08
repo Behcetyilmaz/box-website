@@ -14,11 +14,6 @@ import { MenuItems } from "./MenuItems";
 };*/
 
 function Nav() {
-	const variants = {
-		hidden: { opacity: 0 },
-		visible: { opacity: 1, delay: 3000 },
-	};
-
 	const [clicked, setClicked] = React.useState(false);
 	const navItemRef = React.createRef();
 
@@ -37,7 +32,22 @@ function Nav() {
 		navItemRefCur.classList.toggle(styles.burger);
 		*/
 	};
-
+	const variants = {
+		visible: (custom) => {
+			return {
+				//	opacity: 1,
+				x: 0,
+				transition: {
+					delay: 0.3,
+					duration: custom === 0 ? 0.7 * 0.3 : custom * 0.3,
+				},
+			};
+		},
+		hidden: {
+			//	opacity: 0,
+			x: "100vh",
+		},
+	};
 	return (
 		<div className={styles.container}>
 			<div className={styles.logoWrapper}>
@@ -47,8 +57,10 @@ function Nav() {
 				{MenuItems.map((item, index) => {
 					return (
 						<motion.li
-							initial="hidden"
-							animate="visible"
+							initial={{ x: "100vh" }}
+							transition={{ duration: 0.3 }}
+							custom={index}
+							animate={clicked ? "visible" : " hidden"}
 							variants={variants}
 							className={styles.navItem}
 							key={index}

@@ -3,12 +3,12 @@
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background: -webkit-linear-gradient(right, #596275, #303952);
+    background:  #2C3A47;
     font-family: 'Poppins', sans-serif;
 }
 
 .logoWrapper {
-    color: rgb(226, 226, 226);
+    color:#EAB543;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     font-size: 1.2rem;
@@ -22,7 +22,7 @@
 
 .navItem {
     letter-spacing: 0.1rem;
-    color: rgb(226, 226, 226);
+    color: #EAB543;
     font-weight: bold;
     font-size: 0.9rem;
     list-style: none;
@@ -36,7 +36,7 @@
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: rgb(226, 226, 226);
+    background-color: #EAB543;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -56,8 +56,7 @@
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background: -webkit-linear-gradient(right, #596275, #303952);
-        ;
+        background: #2C3A47;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -81,10 +80,6 @@
     transform: translateX(0%);
 }
 
-.navItemShow {
-    opacity: 1;
-}
-
 
 
 @keyframes navLinkFade {
@@ -101,6 +96,7 @@
 
 .navItemAnimation {
     animation: navLinkFade 0.5s ease forwards 1.5;
+ 
 }
 
 .toggle .line1 {

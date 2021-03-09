@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/Nav.module.css";
+import NavAnimation from "./NavAnimation";
 
 function Nav() {
 	const [clicked, setClicked] = React.useState(false);
@@ -15,7 +16,8 @@ function Nav() {
 			<div className={styles.logoWrapper}>
 				<h4>Box Bunny</h4>
 			</div>
-			<ul className={`${styles.navLink} ${clicked ? styles.navActive : ""}`}>
+			<NavAnimation show={clicked} />
+			{/* <ul className={`${styles.navLink} ${clicked ? styles.navActive : ""}`}>
 				{MenuItems.map((item, index) => {
 					return (
 						<animated.li className={styles.navItem} key={index} style={props}>
@@ -23,7 +25,7 @@ function Nav() {
 						</animated.li>
 					);
 				})}
-			</ul>
+			</ul> */}
 			<div
 				className={`${styles.burger} ${clicked ? styles.toggle : ""}`}
 				onClick={burgerOnClick}

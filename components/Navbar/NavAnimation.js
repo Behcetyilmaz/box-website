@@ -1,18 +1,19 @@
-import styles from "Nav.module.css";
 import React, { useRef } from "react";
 import { animated, config, useChain, useTransition } from "react-spring";
+import styles from "../../styles/Nav.module.css";
+import { MenuItems } from "./MenuItems";
 
-export default NavAnimation = ({ show }) => {
+const NavAnimation = ({ show }) => {
 	const sidebarRef = useRef();
 	const transition = useTransition(show, null, {
 		from: {
-			transform: "translateX(-100%)",
+			transform: "translateX(100%)",
 		},
 		enter: {
 			transform: "translateX(0)",
 		},
 		leave: {
-			transform: "translateY(-100%)",
+			transform: "translateY(100%)",
 		},
 		unique: true,
 		config: config.stiff,
@@ -21,7 +22,7 @@ export default NavAnimation = ({ show }) => {
 		// onRest: onAnimationEnd
 	});
 
-	const items = ["Home", "About", "Contact", "Info"];
+	const items = MenuItems;
 	const itemsRef = useRef();
 	const trail = useTransition(show ? items : [], (item) => item, {
 		from: {
@@ -34,7 +35,7 @@ export default NavAnimation = ({ show }) => {
 		},
 		leave: {
 			opacity: 0,
-			transform: "translateY(-25px)",
+			transform: "translateY(50px)",
 		},
 		ref: itemsRef,
 		config: config.wobbly,
@@ -50,12 +51,21 @@ export default NavAnimation = ({ show }) => {
 	return transition.map(({ item, key, props }) =>
 		item ? (
 			<animated.div key={key} style={props} className={styles.navLink}>
-				{trail.map(({ item, key, props }) => (
-					<animated.div key={item} style={props} className={styles.navItem}>
-						{item}
-					</animated.div>
-				))}
+				{trail.map(({ item, key, props }) => {
+					console.log(item, key, props);
+					return (
+						<animated.div
+							key={item.title}
+							style={props}
+							className={styles.navItem}
+						>
+							{item.title}
+						</animated.div>
+					);
+				})}
 			</animated.div>
 		) : null
 	);
 };
+
+export default NavAnimation;

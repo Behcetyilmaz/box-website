@@ -61,8 +61,8 @@
         flex-direction: column;
         align-items: center;
         width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
+        /* transform: translateX(100%);
+        transition: transform 0.3s ease-in; */
     }
 
     /*.navItem{
@@ -75,24 +75,6 @@
     }
 }
 
-.navActive {
-
-    transform: translateX(0%);
-}
-
-
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
 
 .navItemAnimation {
     animation: navLinkFade 0.5s ease forwards 1.5;

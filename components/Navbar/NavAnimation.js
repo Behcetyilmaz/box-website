@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useRef } from "react";
 import { animated, config, useChain, useTransition } from "react-spring";
 import styles from "../../styles/Nav.module.css";
@@ -7,16 +8,19 @@ const NavAnimation = ({ show }) => {
 	const sidebarRef = useRef();
 	const transition = useTransition(show, null, {
 		from: {
-			transform: "translateX(100%)",
+			width: "0%",
+			//transform: "translateX(100%)",
 		},
 		enter: {
-			transform: "translateX(0)",
+			width: "40%",
+			//transform: "translateX(0%)",
 		},
 		leave: {
-			transform: "translateY(100%)",
+			width: "0%",
+			//transform: "translateX(100%)",
 		},
 		unique: true,
-		config: config.stiff,
+		config: config.default,
 		ref: sidebarRef,
 		// onStart: onAnimationStart,
 		// onRest: onAnimationEnd
@@ -24,18 +28,18 @@ const NavAnimation = ({ show }) => {
 
 	const items = MenuItems;
 	const itemsRef = useRef();
-	const trail = useTransition(show ? items : [], (item) => item, {
+	const trail = useTransition(show ? items : [], (item) => item?.title, {
 		from: {
 			opacity: 0,
-			transform: "translateY(50px)",
+			transform: "translateX(50px)",
 		},
 		enter: {
 			opacity: 1,
-			transform: "translateY(0)",
+			transform: "translateX(0px)",
 		},
 		leave: {
 			opacity: 0,
-			transform: "translateY(50px)",
+			transform: "translateX(50px)",
 		},
 		ref: itemsRef,
 		config: config.wobbly,
@@ -45,25 +49,24 @@ const NavAnimation = ({ show }) => {
 
 	useChain(
 		show ? [sidebarRef, itemsRef] : [itemsRef, sidebarRef],
-		show ? [0, 0.25] : [0, 0.6]
+		show ? [0, 0.25] : [0, 0.4]
 	);
 
 	return transition.map(({ item, key, props }) =>
 		item ? (
-			<animated.div key={key} style={props} className={styles.navLink}>
+			<animated.ul key={key} style={props} className={styles.navLink}>
 				{trail.map(({ item, key, props }) => {
-					console.log(item, key, props);
 					return (
-						<animated.div
+						<animated.li
 							key={item.title}
 							style={props}
 							className={styles.navItem}
 						>
-							{item.title}
-						</animated.div>
+							<Link href={item.url}>{item.title}</Link>
+						</animated.li>
 					);
 				})}
-			</animated.div>
+			</animated.ul>
 		) : null
 	);
 };

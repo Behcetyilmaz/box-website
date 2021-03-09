@@ -5,6 +5,10 @@
     min-height: 8vh;
     background:  #2C3A47;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    min-width: 100% !important;
 }
 
 .logoWrapper {
@@ -16,7 +20,7 @@
 
 .navLink {
     display: flex;
-    width: 30%;
+    width: 30%; 
     justify-content: space-around;
 }
 
@@ -41,12 +45,6 @@
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width:1024px) {
-    .navLink {
-        width: 60%;
-    }
-}
-
 
 @media screen and (max-width:1024px) {
 
@@ -60,14 +58,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
-        /* transform: translateX(100%);
-        transition: transform 0.3s ease-in; */
+        width: 40%;
+        
+        
     }
-
-    /*.navItem{
-        opacity: 0;
-    }*/
 
     .burger {
         display: block;
@@ -76,10 +70,6 @@
 }
 
 
-.navItemAnimation {
-    animation: navLinkFade 0.5s ease forwards 1.5;
- 
-}
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);

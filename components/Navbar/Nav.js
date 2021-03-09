@@ -4,7 +4,6 @@ import NavAnimation from "./NavAnimation";
 
 function Nav() {
 	const [clicked, setClicked] = React.useState(false);
-	const navItemRef = React.createRef();
 
 	const burgerOnClick = () => {
 		//Toggle Nav
@@ -17,15 +16,6 @@ function Nav() {
 				<h4>Box Bunny</h4>
 			</div>
 			<NavAnimation show={clicked} />
-			{/* <ul className={`${styles.navLink} ${clicked ? styles.navActive : ""}`}>
-				{MenuItems.map((item, index) => {
-					return (
-						<animated.li className={styles.navItem} key={index} style={props}>
-							<Link href={item.url}>{item.title}</Link>
-						</animated.li>
-					);
-				})}
-			</ul> */}
 			<div
 				className={`${styles.burger} ${clicked ? styles.toggle : ""}`}
 				onClick={burgerOnClick}

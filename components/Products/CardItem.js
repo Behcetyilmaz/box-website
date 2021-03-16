@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { Card, Icon } from "semantic-ui-react";
-
+import styles from "../../styles/Products.module.css";
 const CardItem = () => {
 	React.useEffect(() => {
 		getProducts();
@@ -27,6 +27,7 @@ const CardItem = () => {
 	return product.map((item, index) => {
 		return (
 			<Card
+				className={styles.cardItem}
 				image={item.productImage}
 				header={item.productName}
 				meta="Friend"

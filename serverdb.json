@@ -1,23 +1,60 @@
 {
-  "products": [
-      {
-          "productName": "Coffe Cup",
-          "productDes": "700cc Printed",
-          "productImage": "/cup.png",
-          "productUrl": "/products:_id",
-          "productStock": "5",
-          "productPrice": "300",
-          "productCategory": "Cup"
-      },
-      {
-          "productName": "Coffe Cup",
-          "productDes": "700cc Printed",
-          "productImage": "/cup.png",
-          "productUrl": "/products:_id",
-          "productStock": "5",
-          "productPrice": "300",
-          "productCategory": "Cup"
-      }
-  ]
-      
+    "products": [{
+            "productName": "Coffe Cup",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": "Cup"
+        },
+        {
+            "productName": "Coffe Cup",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": "Cup"
+        }
+    ],
+    "categories": [{
+            "id": 0,
+            "name": "Salad Bowls",
+            "subCategories": [{
+                "id": 0,
+                "name": "40x40"
+            }, {
+                "id": 1,
+                "name": "60x60"
+            }, {
+                "id": 2,
+                "name": "80x80"
+            }, {
+                "id": 3,
+                "name": "100x100"
+            }, {
+                "id": 4,
+                "name": "120x120"
+            }]
+        },
+        {
+            "id": 1,
+            "name": "Soup-Bowls",
+            "subCategories": [{
+                "id": 0,
+                "name": "small"
+            }, {
+                "id": 1,
+                "name": "medium"
+            }, {
+                "id": 2,
+                "name": "large"
+            }]
+        },
+        {
+            "id": 2,
+            "name": "Hot-Cups"
+        }
+    ]
 }

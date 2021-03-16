@@ -27,6 +27,7 @@ const CardItem = () => {
 	return product.map((item, index) => {
 		return (
 			<Card
+				onClick={() => alert("detaya gidecek...")}
 				className={styles.cardItem}
 				image={item.productImage}
 				header={item.productName}

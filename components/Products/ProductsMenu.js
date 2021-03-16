@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Menu } from "semantic-ui-react";
 
 export default function ProductsMenu() {
-	const [activeItem, setActiveItem] = useState("");
+	const [activeItem, setActiveItem] = useState("40x40");
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(false);
 

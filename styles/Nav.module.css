@@ -1,18 +1,5 @@
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background:  #2C3A47;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-
-    min-width: 100% !important;
-}
-
 .logoWrapper {
-    color:#EAB543;
+    color:#112a46;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     font-size: 1.2rem;
@@ -24,9 +11,24 @@
     justify-content: space-around;
 }
 
+
 .navItem {
     letter-spacing: 0.1rem;
-    color: #EAB543;
+    color: #112a46;
+    font-weight: bold;
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.navLinkHorizantal {
+    display: flex;
+    width: 30%; 
+    justify-content: space-around;
+}
+
+.navItemHorizantal {
+    letter-spacing: 0.1rem;
+    color: #112a46;
     font-weight: bold;
     font-size: 0.9rem;
     list-style: none;
@@ -40,27 +42,30 @@
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: #EAB543;
+    background-color: #112a46;
     margin: 5px;
     transition: all 0.3s ease;
 }
 
 
 @media screen and (max-width:1024px) {
-
+    
 
     .navLink {
         position: absolute;
         right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background: #2C3A47;
+        height: 94vh;
+        top: 6vh;
+        background: #e0e0e0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
-        
-        
+        width: 50%;
+  
+    }
+
+    .navLinkHorizantal{
+        display: none;
     }
 
     .burger {

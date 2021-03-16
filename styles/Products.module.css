@@ -1,0 +1,37 @@
+.productsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.cardWrapper{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-content: center;
+    grid-gap: 3rem;
+
+    
+}
+
+.menuWrapper{
+   flex: 1;
+}
+
+@media (max-width: 1640px){
+   .cardWrapper{
+       grid-template-columns: 1fr 1fr 1fr;
+   } 
+}
+
+@media (max-width: 1250px){
+    .cardWrapper{
+        grid-template-columns: 1fr 1fr;
+    } 
+ }
+
+ @media (max-width: 900px){
+    .cardWrapper{
+        grid-template-columns: 1fr;
+    } 
+ }

@@ -4,20 +4,17 @@ import { animated, config, useChain, useTransition } from "react-spring";
 import styles from "../../styles/Nav.module.css";
 import { MenuItems } from "./MenuItems";
 
-const NavAnimation = ({ show }) => {
+const NavAnimation = ({ show, toggle }) => {
 	const sidebarRef = useRef();
 	const transition = useTransition(show, null, {
 		from: {
-			width: "0%",
-			//transform: "translateX(100%)",
+			transform: "translateX(100%)",
 		},
 		enter: {
-			width: "40%",
-			//transform: "translateX(0%)",
+			transform: "translateX(0%)",
 		},
 		leave: {
-			width: "0%",
-			//transform: "translateX(100%)",
+			transform: "translateX(100%)",
 		},
 		unique: true,
 		config: config.default,
@@ -61,6 +58,7 @@ const NavAnimation = ({ show }) => {
 							key={item.title}
 							style={props}
 							className={styles.navItem}
+							onClick={() => toggle()}
 						>
 							<Link href={item.url}>{item.title}</Link>
 						</animated.li>

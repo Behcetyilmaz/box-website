@@ -1,4 +1,6 @@
-const images = {
-	menuLogo: require("../assets/img/menu.png"),
+const imagesUrl = {
+	abcd123: "/cup.png",
+	abcd122: "/toilet_paper.png",
 };
-export { images };
+
+export { imagesUrl };

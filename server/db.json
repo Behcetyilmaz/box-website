@@ -1,0 +1,23 @@
+{
+    "products": [
+        {
+            "productName": "Coffe Cup",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": "Cup"
+        },
+        {
+            "productName": "Coffe Cup",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": "Cup"
+        }
+    ]
+        
+}

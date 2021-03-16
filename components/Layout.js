@@ -6,7 +6,7 @@ function Layout({ children }) {
 		<>
 			<Meta />
 			<Nav />
-			<div>{children}</div>
+			<div className="container">{children}</div>
 		</>
 	);
 }

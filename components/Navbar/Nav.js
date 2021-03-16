@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/Nav.module.css";
 import NavAnimation from "./NavAnimation";
+import NavbarHorizantal from "./NavbarHorizantal";
 
 function Nav() {
 	const [clicked, setClicked] = React.useState(false);
@@ -11,11 +12,13 @@ function Nav() {
 	};
 
 	return (
-		<div className={styles.container}>
+		<nav>
 			<div className={styles.logoWrapper}>
 				<h4>Box Bunny</h4>
 			</div>
-			<NavAnimation show={clicked} />
+
+			<NavbarHorizantal />
+
 			<div
 				className={`${styles.burger} ${clicked ? styles.toggle : ""}`}
 				onClick={burgerOnClick}
@@ -24,7 +27,14 @@ function Nav() {
 				<div className={styles.line2}></div>
 				<div className={styles.line3}></div>
 			</div>
-		</div>
+
+			<NavAnimation
+				show={clicked}
+				toggle={() => {
+					setClicked(!clicked);
+				}}
+			/>
+		</nav>
 	);
 }
 

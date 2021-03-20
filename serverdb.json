@@ -6,7 +6,8 @@
             "productUrl": "/products:_id",
             "productStock": "5",
             "productPrice": "300",
-            "productCategory": "Cup"
+            "productCategory": 2,
+            "productSubCategory": 2
         },
         {
             "productName": "Coffe Cup",
@@ -15,7 +16,48 @@
             "productUrl": "/products:_id",
             "productStock": "5",
             "productPrice": "300",
-            "productCategory": "Cup"
+            "productCategory": 2,
+            "productSubCategory": 1
+        },
+        {
+            "productName": "Salad Bowl",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": 0,
+            "productSubCategory": 1
+        },
+        {
+            "productName": "Salad Bowl",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": 0,
+            "productSubCategory": 1
+        },
+        {
+            "productName": "Soup Bowl",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": 1,
+            "productSubCategory": 1
+        },
+        {
+            "productName": "Soup Bowl",
+            "productDes": "700cc Printed",
+            "productImage": "/cup.png",
+            "productUrl": "/products:_id",
+            "productStock": "5",
+            "productPrice": "300",
+            "productCategory": 1,
+            "productSubCategory": 1
         }
     ],
     "categories": [{
@@ -40,7 +82,7 @@
         },
         {
             "id": 1,
-            "name": "Soup-Bowls",
+            "name": "Soup Bowls",
             "subCategories": [{
                 "id": 0,
                 "name": "small"
@@ -54,7 +96,17 @@
         },
         {
             "id": 2,
-            "name": "Hot-Cups"
+            "name": "Hot-Cups",
+            "subCategories": [{
+                "id": 0,
+                "name": "small"
+            }, {
+                "id": 1,
+                "name": "medium"
+            }, {
+                "id": 2,
+                "name": "large"
+            }]
         }
     ]
 }

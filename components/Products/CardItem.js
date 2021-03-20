@@ -16,10 +16,10 @@ const CardItem = () => {
 
 	const [product, setProduct] = React.useState([]);
 
-	const getProducts = () => {
-		axios.get("http://localhost:4000/products").then((res) => {
-			if (res.data.length > 0) {
-				setProduct(res.data);
+	const getProducts = async () => {
+		await axios.get("http://localhost:8080/api/products").then((res) => {
+			if (res.data) {
+				setProduct(res.data.products);
 			}
 		});
 	};
@@ -32,7 +32,7 @@ const CardItem = () => {
 				image={item.productImage}
 				header={item.productName}
 				meta="Friend"
-				description={item.productDes}
+				description={item.productDescription}
 				extra={extra}
 				key={index}
 			/>

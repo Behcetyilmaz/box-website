@@ -44,7 +44,7 @@ router.post("/", (req, res) => {
 //GET Product By Id
 
 router.get("/:id", getProductById, (req, res) => {
-	res.json(res.product.productName);
+	return res.json(res.product.productName);
 });
 
 //DETE Product By Id
